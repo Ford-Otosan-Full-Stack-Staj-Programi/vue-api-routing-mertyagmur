@@ -36,6 +36,18 @@ import HelloWorld from './components/HelloWorld.vue'
 
 }
 
+.content::before {    
+      content: "";
+      background-image: url("/background.jpg");
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.15;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
