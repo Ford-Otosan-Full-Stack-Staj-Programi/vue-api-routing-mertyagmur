@@ -1,15 +1,20 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h2>This app is created by Mert Yağmur as a Ford Otosan Full Stack Development Bootcamp homework.</h2>
+    <h1>Stuff to add/improve</h1>
+    <ul>
+      <li>Infinite scroll is being triggered automatically for some reason</li>
+      <li>Add search functionality</li>
+      <li>Add sorting</li>
+      <li>Improve SingleCharacterView</li>
+      <li>Get locations and episodes as well</li>
+      <li>Fix CSS</li>
+    </ul>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
+<style scoped>
   .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    height: 100vh;
   }
-}
 </style>

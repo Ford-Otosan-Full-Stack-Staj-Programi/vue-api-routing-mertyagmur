@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Introduction from './components/Introduction.vue'
 </script>
 
 <template>
@@ -13,7 +13,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
       <nav>
         <RouterLink to="/">Characters</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
@@ -61,9 +60,11 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 24px;
   text-align: center;
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 nav a.router-link-exact-active {

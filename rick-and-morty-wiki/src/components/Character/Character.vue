@@ -10,9 +10,6 @@ const charactersList = ref([])
 
 let page = 1
 
-
-
-
 useInfiniteScroll(
   el,
   async () => {
