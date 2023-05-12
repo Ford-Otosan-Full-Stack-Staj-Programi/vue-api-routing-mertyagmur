@@ -1,25 +1,42 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import CharacterItem from './CharacterItem.vue'
-import { getCharacters } from "@/service/characters"
+import { getCharacters, getCharacters2 } from "@/service/characters"
+import {useInfiniteScroll} from "@vueuse/core"
 
-const characters = ref([])
+const el = ref(null)
 
-onMounted(async () => {
-  characters.value = await getCharacters()
-})
+const charactersList = ref([])
+
+let page = 1
+
+
+
+
+useInfiniteScroll(
+  el,
+  async () => {
+    await getCharactersOnScroll(page)
+    page++
+  },
+  {distance: 20}
+)
+
+const getCharactersOnScroll = async (page) => {
+  const newCharacters = await getCharacters2(page)
+  
+  charactersList.value.push(...newCharacters)
+}
 
 </script>
 
 <template>
-  <div  class="grid">
-    <template v-for="character in characters">
-        <div class="grid__item">
-          <RouterLink :to="'/characters/' + character.id">
-            <CharacterItem  :id="character.id"></CharacterItem>
-          </RouterLink>
-        </div>
-      </template>
+  <div ref="el" class="grid">
+      <div v-for="character in charactersList" class="grid__item">
+        <RouterLink :to="'/characters/' + character.id">
+          <CharacterItem :id="character.id"></CharacterItem>
+        </RouterLink>
+      </div>
   </div>
 </template>
 

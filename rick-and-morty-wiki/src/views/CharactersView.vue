@@ -4,6 +4,11 @@ import Character from '../components/Character/Character.vue'
 
 <template>
   <main>
+    <Suspense>
     <Character></Character>
+    <template #fallback>
+        <p>Loading...</p>
+    </template>
+    </Suspense>
   </main>
 </template>

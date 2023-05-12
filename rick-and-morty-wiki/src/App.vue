@@ -33,13 +33,13 @@ import HelloWorld from './components/HelloWorld.vue'
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-repeat: repeat-y;
 
 }
 
 .content::before {    
       content: "";
       background-image: url("/background.jpg");
-      background-size: cover;
       position: absolute;
       top: 0px;
       right: 0px;
