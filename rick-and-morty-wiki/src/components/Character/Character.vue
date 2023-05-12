@@ -28,21 +28,12 @@ onMounted(async () => {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-around;
 
 
   &__item {
-    width: calc(100% / 4);
-    aspect-ratio: 4/3;
-
-    padding: 10px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    padding: 15px;
   }
 
 }
