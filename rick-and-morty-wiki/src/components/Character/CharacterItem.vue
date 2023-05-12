@@ -37,6 +37,7 @@ onMounted(async () => {
     align-items: center;
     overflow: hidden;
     background-color: hsla(189, 57%, 52%, 1);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.377);
     &.grow {
         transition: all .2s ease-in-out;
 
