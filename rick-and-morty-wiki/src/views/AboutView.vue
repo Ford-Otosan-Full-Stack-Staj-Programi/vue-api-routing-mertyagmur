@@ -8,7 +8,8 @@
       <li>Add sorting</li>
       <li>Improve SingleCharacterView</li>
       <li>Get locations and episodes as well</li>
-      <li>Fix CSS</li>
+      <li>Use consistent CSS (scss)</li>
+      <li>Just use axios</li>
     </ul>
   </div>
 </template>

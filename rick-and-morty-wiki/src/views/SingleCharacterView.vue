@@ -30,6 +30,7 @@ onMounted(async () => {
   <style lang="scss" scoped>
   
   .listing {
+    
     &__item {
       display: flex;
       flex-direction: row;
@@ -38,10 +39,12 @@ onMounted(async () => {
   
       margin: 10px 0;
       padding: 20px;
-  
+      border: 10px;
+      border-color: rgb(191,222,66);
+      border-style: solid;
       border-radius: 16px;
   
-      background-color: lavender;
+      background-color: hsla(189, 57%, 52%, 1);
     }
     &__content{
       display: flex;
@@ -56,7 +59,10 @@ onMounted(async () => {
         font-size: 32px;
       }
     }
-
   }
+
+  img {
+      border-radius: 20%;
+    }
   </style>
   
